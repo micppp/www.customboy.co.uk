@@ -620,3 +620,26 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+body {
+  background-color: #f6f6f6;
+}
+
+#gatsby-focus-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.gatsby-image-wrapper {
+  height: 300px;
+  width: 300px;
+}
+
+@media only screen and (min-width: 768px) {
+  .gatsby-image-wrapper {
+    height: 600px;
+    width: 600px;
+  }
+}
