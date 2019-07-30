@@ -1,5 +1,5 @@
 ---
-path: test article
+path: /test-article
 date: 2019-07-30T20:21:25.309Z
 title: Testing
 image: /assets/photo-1564420432368-32655b018246.jpeg
