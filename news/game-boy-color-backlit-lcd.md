@@ -1,5 +1,5 @@
 ---
-path: testing-second
+path: /testing-second
 date: 2019-08-05T10:36:59.553Z
 title: Game Boy Color backlit LCD
 ---
