@@ -13,7 +13,7 @@ const News = () => {
           excerpt(pruneLength: 150)
           frontmatter {
             title
-            date
+            date(formatString: "DD-MMM-YYYY")
             path
           }
         }
@@ -32,6 +32,7 @@ const News = () => {
                 <Link to={frontmatter.path}>{frontmatter.title}</Link>
               </h2>
               <p>{frontmatter.date}</p>
+              <p>{excerpt}</p>
             </div>
           );
         })}

@@ -13,7 +13,9 @@ export default function Template({ data }) {
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>
           <h2>{frontmatter.price}</h2>
-          {frontmatter.images && frontmatter.images.mainimage && <img src={frontmatter.images.mainimage} alt="" />}
+          {frontmatter.images && frontmatter.images.mainimage && (
+            <img src={frontmatter.images.mainimage} alt="" />
+          )}
         </div>
       </div>
     </Layout>
@@ -25,7 +27,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD-MMM-YYYY")
         path
         title
         price

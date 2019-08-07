@@ -12,7 +12,7 @@ const IndexPage = () => {
           frontmatter {
             title
             path
-            date
+            date(formatString: "DD-MMM-YYYY")
           }
         }
       }
