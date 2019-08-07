@@ -45,5 +45,6 @@ collections:
         name: "about"
         file: "content/about.md"
         fields:
+          - { name: path, label: Path }
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
