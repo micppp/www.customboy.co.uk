@@ -1,0 +1,27 @@
+.header {
+  border-top: 10px solid #9bbc0f;
+}
+
+.header > .container {
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.logo {
+  height: 80px;
+  width: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  .header > .container {
+    grid-template-columns: 1fr 300px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .header > .container {
+    grid-template-columns: 300px 1fr 300px
+  }
+}

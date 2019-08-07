@@ -4,8 +4,8 @@ backend:
 media_folder: static/assets
 public_folder: assets
 collections:
-  - name: news
-    label: News
+  - label: News
+    name: news
     folder: news
     create: true
     fields:
@@ -14,3 +14,26 @@ collections:
       - { name: title, label: Title }
       - { name: "image", label: "Cover Image", widget: "image", required: false, tagname: ""}
       - { name: body, label: Body, widget: markdown }
+  - label: Product
+    name: product
+    folder: products
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - label: "Images"
+        name: "images"
+        widget: "object"
+        fields:
+          - { name: "mainimage", label: "Main Image", widget: "image", required: false, tagname: ""}
+          - { name: "secondaryimage", label: "Secondary Image", widget: "image", required: false, tagname: ""}
+      - { name: list, label: Features, widget: list }
+      - { name: content, label: Content, widget: markdown }
+      - { name: price, label: Price, widget: number }
+      - label: "Sale"
+        name: "sale"
+        widget: "select"
+        options: ["Yes", "No"]
+        default: "No"

@@ -1,14 +1,42 @@
-import React from "react"
+import React from "react";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const IndexPage = () => {
+  const { allMarkdownRemark: data } = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        nodes {
+          excerpt(pruneLength: 150)
+          frontmatter {
+            title
+            path
+            date
+          }
+        }
+      }
+    }
+  `);
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Image />
-  </Layout>
-)
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <div className="container">
+        {data.nodes.map(({ excerpt, frontmatter }) => {
+          return (
+            <>
+              <h2>
+                <Link to={frontmatter.path}>{frontmatter.title}</Link>
+              </h2>
+              <p>{frontmatter.date}</p>
+              <p>{excerpt}</p>
+            </>
+          );
+        })}
+      </div>
+    </Layout>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
