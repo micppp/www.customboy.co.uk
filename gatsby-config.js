@@ -35,6 +35,13 @@ module.exports = {
         path: `${__dirname}/news`
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `product-page`,
+        path: `${__dirname}/products`
+      }
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
