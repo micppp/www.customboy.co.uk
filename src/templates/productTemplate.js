@@ -7,12 +7,15 @@ export default function Template({
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
+
   return (
     <Layout>
       <div className="container">
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>
+          <h2>{frontmatter.price}</h2>
+          <img src={frontmatter.images.mainimage} alt="" />
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -30,6 +33,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        price
+        content
+        list
+        images {
+          mainimage
+          secondaryimage
+        }
       }
     }
   }

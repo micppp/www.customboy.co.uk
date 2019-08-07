@@ -6,7 +6,7 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       news: allMarkdownRemark(
-        filter: { fileAbsolutePath: { glob: "/news/*.md" } }
+        filter: { fileAbsolutePath: { glob: "**/news/*.md" } }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
@@ -19,7 +19,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
       products: allMarkdownRemark(
-        filter: { fileAbsolutePath: { glob: "/products/*.md" } }
+        filter: { fileAbsolutePath: { glob: "**/products/*.md" } }
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {

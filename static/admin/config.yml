@@ -20,7 +20,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{title}}"
     fields:
-      - { name: layout, label: Layout, widget: hidden, default: "product"}
+      - { name: "layout", label: "Layout", widget: "hidden", default: "product"}
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
