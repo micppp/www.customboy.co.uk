@@ -1,4 +1,5 @@
 ---
+layout: product
 path: /test-product-yellow
 date: 2019-08-07T12:33:36.072Z
 title: Test Product Yellow
@@ -58,6 +59,5 @@ content: >-
   eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
   in culpa qui officia deserunt mollit anim id est laborum.
 price: 80
-sale: 'Yes'
+sale: "Yes"
 ---
-

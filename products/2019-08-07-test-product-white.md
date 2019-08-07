@@ -1,4 +1,5 @@
 ---
+layout: product
 path: /test-product
 date: 2019-08-07T10:09:27.518Z
 title: Test product white
@@ -51,6 +52,5 @@ content: >-
   eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
   in culpa qui officia deserunt mollit anim id est laborum.
 price: 100
-sale: 'No'
+sale: "No"
 ---
-
