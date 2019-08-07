@@ -29,7 +29,7 @@ export default function Navigation() {
           <Link to="/">Tutorials</Link>
         </li>
         <li className="navigation-list__item">
-          <Link to="/">Store</Link>
+          <Link to="/store">Store</Link>
         </li>
         <li className="navigation-list__item">
           <Link to="/">About</Link>

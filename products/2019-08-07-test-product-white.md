@@ -1,6 +1,6 @@
 ---
 layout: product
-path: /test-product
+path: /store/test-product
 date: 2019-08-07T10:09:27.518Z
 title: Test product white
 images:

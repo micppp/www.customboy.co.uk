@@ -1,8 +1,10 @@
 const path = require(`path`);
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
   const newsArticleTemplate = path.resolve(`src/templates/newsTemplate.js`);
   const productTemplate = path.resolve(`src/templates/productTemplate.js`);
+
   return graphql(`
     {
       news: allMarkdownRemark(
@@ -18,6 +20,7 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+
       products: allMarkdownRemark(
         filter: { fileAbsolutePath: { glob: "**/products/*.md" } }
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -32,7 +35,8 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
+  `)
+  .then(result => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }

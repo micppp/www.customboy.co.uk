@@ -1,6 +1,6 @@
 ---
 layout: product
-path: /test-product-yellow
+path: /store/test-product-yellow
 date: 2019-08-07T12:33:36.072Z
 title: Test Product Yellow
 images:

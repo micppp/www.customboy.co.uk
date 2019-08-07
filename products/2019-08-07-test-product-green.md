@@ -1,6 +1,6 @@
 ---
 layout: product
-path: /test-product-green
+path: /store/test-product-green
 date: 2019-08-07T13:23:43.932Z
 title: Test product green
 list:
@@ -9,6 +9,5 @@ list:
   - reshell
 content: lorem
 price: 90
-sale: 'No'
+sale: "No"
 ---
-
