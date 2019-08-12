@@ -10,17 +10,22 @@ const About = () => {
           title
           content
         }
+        html
       }
     }
   `);
 
-  const { frontmatter } = data;
+  const { frontmatter, html } = data;
 
   return (
     <Layout>
       <div className="container">
         <h1>{frontmatter.title}</h1>
-        <p>{frontmatter.content}</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: html
+          }}
+        />
       </div>
     </Layout>
   );
