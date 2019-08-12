@@ -26,13 +26,10 @@ export default function Navigation() {
           <Link to="/news">News</Link>
         </li>
         <li className="navigation-list__item">
-          <Link to="/">Tutorials</Link>
-        </li>
-        <li className="navigation-list__item">
           <Link to="/store">Store</Link>
         </li>
         <li className="navigation-list__item">
-          <Link to="/">About</Link>
+          <Link to="/about">About</Link>
         </li>
         <li className="navigation-list__item">
           <Link to="/">Contact</Link>
