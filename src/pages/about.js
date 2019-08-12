@@ -8,7 +8,6 @@ const About = () => {
       markdownRemark(fileAbsolutePath: { glob: "**/content/about.md" }) {
         frontmatter {
           title
-          content
         }
         html
       }

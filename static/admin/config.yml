@@ -11,8 +11,8 @@ collections:
         name: "about"
         file: "/content/about.md"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
   - label: News
     name: news
     folder: news
@@ -33,14 +33,19 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - label: "Console"
+        name: "console"
+        widget: "select"
+        options: ["Game Boy", "Game Boy Color", "Game Boy Advance", "Game Boy Advance SP", "Game Boy Macro"]
+        default: "Game Boy"
       - label: "Images"
         name: "images"
         widget: "object"
         fields:
           - { name: "mainimage", label: "Main Image", widget: "image", required: false, tagname: ""}
-          - { name: "secondaryimage", label: "Secondary Image", widget: "image", required: false, tagname: ""}
+          - { name: "secondaryimage", label: "Secondary Image", widget: "image", required: false, tagname: ""}  
       - { name: list, label: Features, widget: list }
-      - { name: content, label: Content, widget: markdown }
+      - { name: body, label: Body, widget: markdown }
       - { name: price, label: Price, widget: number }
       - label: "Sale"
         name: "sale"
