@@ -2,7 +2,7 @@
 path: /gba-ips-v2-released
 date: 2019-08-12T20:24:48.154Z
 title: GBA IPS v2 released
-image: /assets/gba_ips_lcd_v2_11_2000x.jpg
+image: /assets/ips-1200.jpg
 ---
 After the huge success of the first version, the guys over at FunnyPlaying.com have released v2 of their popular IPS LCD screen.
 
