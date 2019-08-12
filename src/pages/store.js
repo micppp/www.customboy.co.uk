@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import "./store.css";
 
 const Store = () => {
   const { allMarkdownRemark: data } = useStaticQuery(graphql`
@@ -28,17 +29,24 @@ const Store = () => {
     <Layout>
       <SEO title="Store" />
       <div className="container">
-        {data.nodes.map(({ frontmatter }) => {
-          return (
-            <div className="product" key={frontmatter.title}>
-              <h2>
-                <Link to={frontmatter.path}>{frontmatter.title}</Link>
-              </h2>
-              <p>{frontmatter.date}</p>
-              <p>{frontmatter.price}</p>
-            </div>
-          );
-        })}
+        <section class="product-grid">
+          {data.nodes.map(({ frontmatter }) => {
+            return (
+              <div className="product" key={frontmatter.title}>
+                {frontmatter.images && frontmatter.images.mainimage && (
+                  <Link to={frontmatter.path}>
+                    <img src={frontmatter.images.mainimage} alt="" />
+                  </Link>
+                )}
+                <h2>
+                  <Link to={frontmatter.path}>{frontmatter.title}</Link>
+                </h2>
+                <p>{frontmatter.date}</p>
+                <p>&pound;{frontmatter.price.toFixed(2)}</p>
+              </div>
+            );
+          })}
+        </section>
       </div>
     </Layout>
   );

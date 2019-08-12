@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const SecondPage = () => {
   const { allMarkdownRemark: data } = useStaticQuery(graphql`
@@ -14,13 +14,12 @@ const SecondPage = () => {
           frontmatter {
             title
             path
-            date
+            date(formatString: "DD-MMM-YYYY")
           }
         }
       }
     }
-  `)
-
+  `);
 
   return (
     <Layout>
@@ -34,10 +33,10 @@ const SecondPage = () => {
             <p>{frontmatter.date}</p>
             <p>{excerpt}</p>
           </>
-        )
+        );
       })}
     </Layout>
-  )
-}
+  );
+};
 
-export default SecondPage
+export default SecondPage;

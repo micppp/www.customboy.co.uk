@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Custom Boy - Game Boy restorations, Game Boy modifications and news`,
+    title: `Custom Boy`,
     description: `Game Boy restorations, modifications and news.`,
     author: `@customboyuk`
   },
