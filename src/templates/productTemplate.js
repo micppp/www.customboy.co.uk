@@ -46,10 +46,6 @@ export const pageQuery = graphql`
         path
         title
         list
-        images {
-          mainimage
-          secondaryimage
-        }
       }
     }
   }

@@ -13,7 +13,13 @@ const Store = () => {
         nodes {
           frontmatter {
             images {
-              mainimage
+              mainimage {
+                childImageSharp {
+                  fixed(width: 300, height: 300) {
+                    src
+                  }
+                }
+              }
             }
             price
             sale
@@ -35,7 +41,10 @@ const Store = () => {
               <div className="product" key={frontmatter.title}>
                 {frontmatter.images && frontmatter.images.mainimage && (
                   <Link to={frontmatter.path}>
-                    <img src={frontmatter.images.mainimage} alt="" />
+                    <img
+                      src={frontmatter.images.mainimage.childImageSharp.fixed.src}
+                      alt=""
+                    />
                   </Link>
                 )}
                 <h2>

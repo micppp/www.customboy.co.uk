@@ -31,7 +31,6 @@ export const pageQuery = graphql`
         date(formatString: "DD-MMM-YYYY")
         path
         title
-        image
       }
     }
   }
