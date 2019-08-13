@@ -5,7 +5,7 @@ import SEO from "../components/seo";
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
-  const { frontmatter } = markdownRemark;
+  const { frontmatter, html } = markdownRemark;
 
   return (
     <Layout>
@@ -27,27 +27,30 @@ export default function Template({ data }) {
           {frontmatter.images && frontmatter.images.secondaryimage && (
             <img src={frontmatter.images.secondaryimage} alt="" />
           )}
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </div>
       </div>
     </Layout>
   );
 }
 
-// export const pageQuery = graphql`
-//   query($path: String!) {
-//     markdownRemark(frontmatter: { path: { eq: $path } }) {
-//       html
-//       frontmatter {
-//         date(formatString: "DD-MMM-YYYY")
-//         path
-//         title
-//         content
-//         list
-//         images {
-//           mainimage
-//           secondaryimage
-//         }
-//       }
-//     }
-//   }
-// `;
+export const pageQuery = graphql`
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        date(formatString: "DD-MMM-YYYY")
+        path
+        title
+        list
+        images {
+          mainimage
+          secondaryimage
+        }
+      }
+    }
+  }
+`;

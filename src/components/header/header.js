@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 import Navigation from "../navigation/navigation";
-import Search from "../search/search";
 import "./header.css";
 
 const Header = () => {

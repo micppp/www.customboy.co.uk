@@ -13,6 +13,34 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-plugin-netlify-cms-paths`,
+            options: {
+              cmsConfig: `/static/admin/config.yml`
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590
+            }
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`
+        ]
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -21,13 +49,14 @@ module.exports = {
         name: `customboy`,
         short_name: `customboy`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#F5F5F5`,
+        theme_color: `#9BBC10`,
         display: `minimal-ui`,
-        icon: "" // This path is relative to the root of the site.
+        icon: "src/images/logo.jpg"
       }
     },
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-netlify-cms-paths`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,7 +78,6 @@ module.exports = {
         path: `${__dirname}/content`
       }
     },
-    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {

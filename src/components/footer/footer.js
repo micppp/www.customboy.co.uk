@@ -36,7 +36,7 @@ const Footer = () => (
           <li className="footer-box__list-item">
             <a
               href="https://twitter.com/customboyuk"
-              rel="noopener nofollow"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Twitter
@@ -45,7 +45,7 @@ const Footer = () => (
           <li className="footer-box__list-item">
             <a
               href="https://www.instagram.com/customboyuk/"
-              rel="noopener nofollow"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Instagram
@@ -56,7 +56,8 @@ const Footer = () => (
       <div className="footer-box footer-box__newsletter">
         <h3 className="footer-box__h3">Join our Newsletter</h3>
         <p className="footer-box__p">
-          Sign up for our newsletter below. We'll keep you updated with any new products and news from Custom Boy.
+          Sign up for our newsletter below. We'll keep you updated with any new
+          products and news from Custom Boy.
         </p>
         <form className="footer-box__form">
           <input
