@@ -56,9 +56,7 @@ const Footer = () => (
       <div className="footer-box footer-box__newsletter">
         <h3 className="footer-box__h3">Join our Newsletter</h3>
         <p className="footer-box__p">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-          incidunt consectetur tempore corporis repudiandae voluptatibus iste
-          quis suscipit eligendi.
+          Sign up for our newsletter below. We'll keep you updated with any new products and news from Custom Boy.
         </p>
         <form className="footer-box__form">
           <input
