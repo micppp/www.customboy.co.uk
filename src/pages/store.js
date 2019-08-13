@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
+import Img from "gatsby-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import "./store.css";
@@ -15,8 +16,8 @@ const Store = () => {
             images {
               mainimage {
                 childImageSharp {
-                  fixed(width: 300, height: 300) {
-                    src
+                  fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -41,8 +42,10 @@ const Store = () => {
               <div className="product" key={frontmatter.title}>
                 {frontmatter.images && frontmatter.images.mainimage && (
                   <Link to={frontmatter.path}>
-                    <img
-                      src={frontmatter.images.mainimage.childImageSharp.fixed.src}
+                    <Img
+                      fluid={
+                        frontmatter.images.mainimage.childImageSharp.fluid
+                      }
                       alt=""
                     />
                   </Link>

@@ -16,7 +16,10 @@ export default function Template({ data }) {
           <h2>{frontmatter.date}</h2>
           <h2>{frontmatter.price}</h2>
           {frontmatter.images && frontmatter.images.mainimage && (
-            <img src={frontmatter.images.mainimage} alt={frontmatter.title} />
+            <img
+              src={frontmatter.images.mainimage.childImageSharp.fixed.src}
+              alt={frontmatter.title}
+            />
           )}
           <p>{frontmatter.content}</p>
           <ul>
@@ -46,6 +49,15 @@ export const pageQuery = graphql`
         path
         title
         list
+        images {
+          mainimage {
+            childImageSharp {
+              fixed(width: 600, height: 600) {
+                src
+              }
+            }
+          }
+        }
       }
     }
   }
