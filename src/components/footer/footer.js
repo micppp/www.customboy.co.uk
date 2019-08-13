@@ -20,10 +20,14 @@ const Footer = () => (
         <h3 className="footer-box__h3">FAQs</h3>
         <ul className="no-bullet footer-box__list">
           <li className="footer-box__list-item">
-            <Link to="delivery-and-returns">Delivery &amp; Returns</Link>
+            <Link to="/delivery-and-returns">Delivery &amp; Returns</Link>
           </li>
-          <li className="footer-box__list-item">Privacy Policy</li>
-          <li className="footer-box__list-item">Terms &amp; Conditions</li>
+          <li className="footer-box__list-item">
+            <Link to="/privacy-policy">Privacy Policy</Link>
+          </li>
+          <li className="footer-box__list-item">
+            <Link to="/terms-and-conditions">Terms &amp; Conditions</Link>
+          </li>
         </ul>
       </div>
       <div className="footer-box">
@@ -57,8 +61,12 @@ const Footer = () => (
           quis suscipit eligendi.
         </p>
         <form className="footer-box__form">
-          <input type="text" placeholder="example@email.com" />
-          <button>Join</button>
+          <input
+            className="footer-box__form-input"
+            type="text"
+            placeholder="example@email.com"
+          />
+          <button className="footer-box__form-button">Join</button>
         </form>
       </div>
       <div className="footer-box footer-box__copyright">
