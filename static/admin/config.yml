@@ -19,6 +19,18 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
+      - label: "Terms and Conditions"
+        name: "terms"
+        file: "/content/terms.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: "Privacy Policy"
+        name: "privacy"
+        file: "/content/privacy.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
   - label: News
     name: news
     folder: news
