@@ -22,6 +22,6 @@
 
 @media only screen and (min-width: 1025px) {
   .header > .container {
-    grid-template-columns: 300px 1fr 300px
+    grid-template-columns: 300px 1fr
   }
 }

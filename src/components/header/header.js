@@ -25,7 +25,6 @@ const Header = () => {
         <Link className="logo" to="/">
           <Img className="logo__image" fixed={data.file.childImageSharp.fixed} />
         </Link>
-        <Search />
         <Navigation />
       </div>
     </header>

@@ -1,7 +1,17 @@
 .search {
+  display: flex;
   grid-column: 1 / -1;
   grid-row: 2;
   margin-bottom: 1rem;
+}
+
+.search__input {
+  border-right: 0;
+  width: 100%;
+}
+
+.search__button {
+  min-width: 80px;
 }
 
 @media only screen and (min-width: 768px) {

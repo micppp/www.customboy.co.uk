@@ -20,31 +20,34 @@ export default function Template({ data }) {
           )}
           <p>{frontmatter.content}</p>
           <ul>
-            {frontmatter.list.map((item, index) => <li key={index}>{item}</li>)}
+            {frontmatter.list.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
           </ul>
-          {frontmatter.images && frontmatter.images.secondaryimage && <img src={frontmatter.images.secondaryimage} alt="" />}
+          {frontmatter.images && frontmatter.images.secondaryimage && (
+            <img src={frontmatter.images.secondaryimage} alt="" />
+          )}
         </div>
       </div>
     </Layout>
   );
 }
 
-export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "DD-MMM-YYYY")
-        path
-        title
-        price
-        content
-        list
-        images {
-          mainimage
-          secondaryimage
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query($path: String!) {
+//     markdownRemark(frontmatter: { path: { eq: $path } }) {
+//       html
+//       frontmatter {
+//         date(formatString: "DD-MMM-YYYY")
+//         path
+//         title
+//         content
+//         list
+//         images {
+//           mainimage
+//           secondaryimage
+//         }
+//       }
+//     }
+//   }
+// `;

@@ -35,8 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `)
-  .then(result => {
+  `).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors);
     }
@@ -49,12 +48,14 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
 
-    result.data.products.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: productTemplate,
-        context: {} // additional data can be passed via context
-      });
-    });
+    result.data.products.length > 0
+      ? result.data.products.edges.forEach(({ node }) => {
+          createPage({
+            path: node.frontmatter.path,
+            component: productTemplate,
+            context: {} // additional data can be passed via context
+          });
+        })
+      : "";
   });
 };

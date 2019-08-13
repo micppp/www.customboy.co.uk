@@ -11,7 +11,8 @@ export default function Template({ data }) {
       <div className="container">
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
+          <img src={frontmatter.image} alt={frontmatter.title} />
+          <time datetime={frontmatter.date}>{frontmatter.date}</time>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -30,6 +31,7 @@ export const pageQuery = graphql`
         date(formatString: "DD-MMM-YYYY")
         path
         title
+        image
       }
     }
   }

@@ -3,8 +3,8 @@ import "./search.css";
 
 const Search = () => (
   <form className="search">
-    <input type="text" placeholder="Search ..." />
-    <button>Search</button>
+    <input className="search__input" type="text" placeholder="Search ..." />
+    <button className="search__button">Search</button>
   </form>
 );
 

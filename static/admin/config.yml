@@ -7,9 +7,15 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "About Page"
+      - label: "About Us"
         name: "about"
         file: "/content/about.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: "Delivery and Returns"
+        name: "delivery"
+        file: "/content/delivery.md"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Body, name: body, widget: markdown }
@@ -43,7 +49,7 @@ collections:
         widget: "object"
         fields:
           - { name: "mainimage", label: "Main Image", widget: "image", required: false, tagname: ""}
-          - { name: "secondaryimage", label: "Secondary Image", widget: "image", required: false, tagname: ""}  
+          - { name: "secondaryimage", label: "Secondary Image", widget: "image", required: false, tagname: ""}
       - { name: list, label: Features, widget: list }
       - { name: body, label: Body, widget: markdown }
       - { name: price, label: Price, widget: number }
