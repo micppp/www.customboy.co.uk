@@ -11,8 +11,14 @@ collections:
         name: "about"
         file: "/content/about.md"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Body, name: body, widget: markdown}
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: "Delivery and Returns"
+        name: "delivery"
+        file: "/content/delivery.md"
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
   - label: News
     name: news
     folder: news
