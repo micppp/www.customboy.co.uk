@@ -5,8 +5,8 @@ date: 2019-08-13T12:01:06.314Z
 title: Game Boy Colour - Transparent Purple
 console: Game Boy Color
 images:
-  mainimage: ''
-  secondaryimage: ''
+  mainimage: /assets/light-purple-front.jpg
+  secondaryimage: /assets/light-purple-back.jpg
 list:
   - Backlit LCD
   - GBC light glass screen
