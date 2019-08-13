@@ -2,7 +2,7 @@ backend:
   name: github
   repo: micppp/www.customboy.co.uk
 media_folder: static/assets
-public_folder: assets
+public_folder: static
 collections:
   - label: "Pages"
     name: "pages"
