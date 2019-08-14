@@ -41,6 +41,23 @@ collections:
       - { name: title, label: Title }
       - { name: "image", label: "Cover Image", widget: "image", required: false, tagname: ""}
       - { name: body, label: Body, widget: markdown }
+  - label: Tutorials
+    name: tutorials
+    folder: tutorials
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: "image", label: "Cover Image", widget: "image", required: false, tagname: ""}
+      - { name: tools, label: Tools, widget: list }
+      - label: "Difficulty"
+        name: "difficulty"
+        widget: "select"
+        options: ["Beginner", "Intermediate", "Advanced"]
+        default: "Beginner"
+      - { name: body, label: Body, widget: markdown }
   - label: Product
     name: product
     folder: products
