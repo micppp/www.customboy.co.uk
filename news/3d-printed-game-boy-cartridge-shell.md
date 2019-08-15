@@ -6,4 +6,4 @@ image: /assets/bc6ffd544b77ea56dd6553b9570d3d9a_preview_featured.jpg
 ---
 [esotericmods](https://www.instagram.com/esotericmods/) has released his replica Game Boy Cartridge Shell on [Thingiverse](https://www.thingiverse.com/thing:3810798). 
 
-You can now print your own Game Boy cartridges at home that look great and like the original. No more of those replica carts that just say GAME at the top!
+You can now print your Game Boy cartridges at home that look great and like the original. No more of those replica carts that just say GAME at the top!
