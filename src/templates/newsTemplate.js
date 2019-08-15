@@ -12,14 +12,14 @@ export default function Template({ data }) {
     <Layout>
       <SEO title={frontmatter.title} />
       <div className="container">
-        <div className="blog-post">
+        <div className="news-item">
           <h1>{frontmatter.title}</h1>
           <Img
             fluid={frontmatter.image.childImageSharp.fluid}
           />
           <time datetime={frontmatter.date}>{frontmatter.date}</time>
           <div
-            className="blog-post-content"
+            className="news-item__content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>

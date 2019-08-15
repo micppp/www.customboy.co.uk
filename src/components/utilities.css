@@ -25,6 +25,7 @@ a {
   text-decoration: none;
 }
 
+.news-item a,
 a:hover {
   border-bottom: 3px solid #9bbc0f;
   padding-bottom: 0.25rem;
