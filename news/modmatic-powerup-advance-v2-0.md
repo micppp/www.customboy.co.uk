@@ -12,4 +12,8 @@ As with v1.2, no soldering is required to fit this mod. They do require you make
 
 modmatic are saying the 1700mAh battery will return up to 16 hours of gaming on a backlit screen, this will be a lot more if you're still running the stock screen on your GBA.
 
-They've also created a [Light Pipe](https://modmatic.io/products/light-pipe-pua?item=LP-002), a power/low-battery indicator which can be installed directly into your battery cover. 
+The [PowerUp Advance](https://modmatic.io/products/powerup-advance?item=APU-003) also allows you to play and charge at the same time via load-sharing circuitry.
+
+They've also created a [Light Pipe](https://modmatic.io/products/light-pipe-pua?item=LP-002), a power/low-battery indicator which can be installed directly into your battery cover.
+
+The [Light Pipe](https://modmatic.io/products/light-pipe-pua?item=LP-002) provides you with low-battery warning light with 60-minute warning time.
