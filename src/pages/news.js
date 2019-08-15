@@ -8,6 +8,7 @@ const News = () => {
     query {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { glob: "**/news/*.md" } }
+        sort: { order: DESC, fields: frontmatter___date }
       ) {
         nodes {
           excerpt(pruneLength: 150)
