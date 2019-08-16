@@ -18,7 +18,7 @@ const About = () => {
 
   return (
     <Layout>
-      <div className="container">
+      <div className="container container--960">
         <h1>{frontmatter.title}</h1>
         <div
           dangerouslySetInnerHTML={{
