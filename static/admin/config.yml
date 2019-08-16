@@ -7,7 +7,7 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "About Page"
+      - label: "About Us"
         name: "about"
         file: "/content/about.md"
         fields:
@@ -68,17 +68,27 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - label: "Console"
+        name: "console"
+        widget: "select"
+        options: ["Game Boy", "Game Boy Color", "Game Boy Advance", "Game Boy Advance SP", "Game Boy Macro"]
+        default: "Game Boy"
       - label: "Images"
         name: "images"
         widget: "object"
         fields:
           - { name: "mainimage", label: "Main Image", widget: "image", required: false, tagname: ""}
           - { name: "secondaryimage", label: "Secondary Image", widget: "image", required: false, tagname: ""}
-      - { name: list, label: Features, widget: list }
-      - { name: content, label: Content, widget: markdown }
-      - { name: price, label: Price, widget: number }
       - label: "Sale"
         name: "sale"
         widget: "select"
         options: ["Yes", "No"]
         default: "No"
+      - label: "Sold"
+        name: "sold"
+        widget: "select"
+        options: ["Yes", "No"]
+        default: "No"
+      - { name: list, label: Features, widget: list }
+      - { name: price, label: Price, widget: number }
+      - { name: body, label: Body, widget: markdown }
