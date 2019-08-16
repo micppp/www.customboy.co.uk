@@ -42,6 +42,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "DD-MMM-YYYY")
+        difficulty
         path
         title
         tools
