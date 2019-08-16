@@ -102,6 +102,7 @@ module.exports = {
         trackingId: "UA-145832451-1"
       }
     },
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`
   ]
 };
