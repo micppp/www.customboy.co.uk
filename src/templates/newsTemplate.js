@@ -11,7 +11,7 @@ export default function Template({ data }) {
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <div className="container">
+      <div className="container container--960">
         <div className="news-item">
           <h1 className="news-item__h1">{frontmatter.title}</h1>
           <time className="news-item__date" datetime={frontmatter.date}>
@@ -43,8 +43,8 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 1200, quality: 80) {
+              ...GatsbyImageSharpFluid_withWebp
               srcWebp
             }
           }
