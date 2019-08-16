@@ -6,6 +6,7 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
   const newsArticleTemplate = path.resolve(`src/templates/newsTemplate.js`);
   const productTemplate = path.resolve(`src/templates/productTemplate.js`);
+  const tutorialTemplate = path.resolve(`src/templates/tutorialTemplate.js`);
 
   return graphql(`
     {
@@ -36,6 +37,20 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+
+      tutorials: allMarkdownRemark(
+        filter: { fileAbsolutePath: { glob: "**/tutorials/*.md" } }
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -54,6 +69,14 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: productTemplate,
+        context: {} // additional data can be passed via context
+      });
+    });
+
+    result.data.tutorials.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: tutorialTemplate,
         context: {} // additional data can be passed via context
       });
     });
