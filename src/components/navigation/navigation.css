@@ -45,7 +45,6 @@
   .navigation {
     grid-column: 2 / -1;
     grid-row: 1;
-    justify-self: normal;
   }
 
   .navigation-toggle {
@@ -68,11 +67,5 @@
   .navigation-list__item {
     font-size: 1rem;
     margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .navigation {
-    justify-self: flex-end;
   }
 }

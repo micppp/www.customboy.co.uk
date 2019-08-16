@@ -11,8 +11,8 @@ export default function Template({ data }) {
     <Layout>
       <SEO title={frontmatter.title} />
       <div className="container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
+        <div className="product">
+          <h1 className="product__h1">{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>
           <h2>{frontmatter.price}</h2>
           {frontmatter.images && frontmatter.images.mainimage && (
@@ -21,8 +21,7 @@ export default function Template({ data }) {
               alt={frontmatter.title}
             />
           )}
-          <p>{frontmatter.content}</p>
-          <ul>
+          <ul className="product__features">
             {frontmatter.list.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -31,7 +30,7 @@ export default function Template({ data }) {
             <img src={frontmatter.images.secondaryimage} alt="" />
           )}
           <div
-            className="blog-post-content"
+            className="product__content"
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>

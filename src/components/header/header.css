@@ -1,5 +1,6 @@
 .header {
   border-top: 10px solid #9bbc0f;
+  margin-bottom: 1rem;
 }
 
 .header > .container {
@@ -15,6 +16,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .header {
+    margin-bottom: 2rem;
+  }
+
   .header > .container {
     grid-template-columns: 1fr 300px;
   }
@@ -22,6 +27,6 @@
 
 @media only screen and (min-width: 1025px) {
   .header > .container {
-    grid-template-columns: 300px 1fr
+    grid-template-columns: 300px 1fr;
   }
 }
