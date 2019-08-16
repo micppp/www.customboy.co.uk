@@ -10,8 +10,8 @@ body {
   padding: 0 1rem;
 }
 
-.fl {
-  display: flex;
+.content {
+  min-height: calc(100vh - 332px);
 }
 
 .no-bullet {
@@ -25,10 +25,9 @@ a {
   text-decoration: none;
 }
 
-.news-item a,
+.news-item__content a,
 a:hover {
   border-bottom: 3px solid #9bbc0f;
-  padding-bottom: 0.25rem;
 }
 
 @media only screen and (min-width: 768px) {

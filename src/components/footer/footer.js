@@ -22,12 +22,6 @@ const Footer = () => (
           <li className="footer-box__list-item">
             <Link to="/delivery-and-returns">Delivery &amp; Returns</Link>
           </li>
-          <li className="footer-box__list-item">
-            <Link to="/privacy-policy">Privacy Policy</Link>
-          </li>
-          <li className="footer-box__list-item">
-            <Link to="/terms-and-conditions">Terms &amp; Conditions</Link>
-          </li>
         </ul>
       </div>
       <div className="footer-box">
@@ -52,21 +46,6 @@ const Footer = () => (
             </a>
           </li>
         </ul>
-      </div>
-      <div className="footer-box footer-box__newsletter">
-        <h3 className="footer-box__h3">Join our Newsletter</h3>
-        <p className="footer-box__p">
-          Sign up for our newsletter below. We'll keep you updated with any new
-          products and news from Custom Boy.
-        </p>
-        <form className="footer-box__form">
-          <input
-            className="footer-box__form-input"
-            type="text"
-            placeholder="example@email.com"
-          />
-          <button className="footer-box__form-button">Join</button>
-        </form>
       </div>
       <div className="footer-box footer-box__copyright">
         <p>

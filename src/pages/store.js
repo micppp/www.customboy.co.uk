@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import "./store.css";
+import "../css/store.css";
 
 const Store = () => {
   const { allMarkdownRemark: data } = useStaticQuery(graphql`

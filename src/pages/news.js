@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import "./news.css";
+import "../css/news.css";
 
 const News = () => {
   const { allMarkdownRemark: data } = useStaticQuery(graphql`

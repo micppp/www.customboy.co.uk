@@ -1,0 +1,28 @@
+.home__h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.home-news__h3 {
+  margin: 0;
+}
+
+.home-news__date {
+  font-size: 0.875rem;
+}
+
+.home-news__p {
+  font-size: 0.933rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-news__articles {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2fr 400px;
+  }
+
+  .home-news__article:not(:first-of-type) {
+    grid-column: 2 / -1;
+  }
+}
