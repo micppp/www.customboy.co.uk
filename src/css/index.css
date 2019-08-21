@@ -1,11 +1,13 @@
 .home__h2 {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--border-light);
   padding-bottom: 1rem;
 }
 
 .home-news__h3 {
+  font-size: 1.125rem;
   line-height: 1.15;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .home-news__date {
@@ -15,6 +17,11 @@
 .home-news__p,
 .home-about__p {
   font-size: 0.933rem;
+}
+
+.home-news__article:not(:first-of-type),
+.home-news__article:not(:last-of-type) {
+  margin-bottom: 3rem;
 }
 
 @media only screen and (min-width: 768px) {
