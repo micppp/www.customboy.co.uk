@@ -9,7 +9,7 @@ import "../css/index.css";
 const IndexPage = () => {
   const { file: hero, footer } = useStaticQuery(graphql`
     query {
-      file(absolutePath: { regex: "/hero.jpg/" }) {
+      file(absolutePath: { glob: "**/src/images/hero.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
@@ -17,7 +17,7 @@ const IndexPage = () => {
           }
         }
       }
-      footer: file(absolutePath: { regex: "/footer-hero.jpg/" }) {
+      footer: file(absolutePath: { glob: "**/src/images/footer-hero.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
