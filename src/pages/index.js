@@ -23,12 +23,14 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <div className="container">
-        <section className="home-hero">
+      <section className="home-hero">
+        <div className="container">
           <Img fluid={hero.childImageSharp.fluid} />
-        </section>
-        <NewsArticles />
-        <section className="home-about">
+        </div>
+      </section>
+      <NewsArticles />
+      <section className="home-about">
+        <div className="container">
           <h2 className="home__h2">About Custom Boy</h2>
           <p className="home-about__p">
             Custom Boy aims to provide you with the latest news from the Game
@@ -45,8 +47,8 @@ const IndexPage = () => {
             case, screen, buttons and more. From this service, we will assemble
             your Game Boy and post it to you in our Custom Boy packaging.
           </p>
-        </section>
-      </div>
+        </div>
+      </section>
     </Layout>
   );
 };

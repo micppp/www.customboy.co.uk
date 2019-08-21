@@ -1,6 +1,16 @@
+:root {
+  --primary: #66F1D9;
+  --secondary: #343E3D;
+  --ternary: #607466;
+  --primary_alt: #AEDCC0;
+  --dark: #111111;
+  --light: #fff;
+  --border-light: #ddd;
+}
+
 body {
   background-color: #f5f5f5;
-  color: #111;
+  color: var(--secondary);
   font-family: 'Fira Sans', sans-serif;
 }
 
@@ -21,13 +31,13 @@ body {
 }
 
 a {
-  color: #111;
+  color: var(--secondary);
   text-decoration: none;
 }
 
 .news-item__content a,
 a:hover {
-  border-bottom: 3px solid #9bbc0f;
+  border-bottom: 3px solid var(--primary);
 }
 
 @media only screen and (min-width: 768px) {

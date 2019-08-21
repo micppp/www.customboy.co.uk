@@ -1,5 +1,5 @@
 .footer {
-  background-color: #111;
+  background-color: var(--secondary);
   margin-top: 2rem;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .footer-box__h3 {
-  color: #fff;
+  color: var(--light);
   margin-top: 0;
 }
 
@@ -52,8 +52,8 @@
 }
 
 .footer-box__copyright {
-  border-top: 1px solid #ccc;
-  color: #fff;
+  border-top: 1px solid var(--light);
+  color: var(--light);
   grid-column: 1 / -1;
   font-size: 0.75rem;
   margin-top: 1rem;
