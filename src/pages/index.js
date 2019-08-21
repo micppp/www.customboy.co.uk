@@ -7,9 +7,17 @@ import NewsArticles from "../components/home/news-articles";
 import "../css/index.css";
 
 const IndexPage = () => {
-  const { file: hero } = useStaticQuery(graphql`
+  const { file: hero, footer } = useStaticQuery(graphql`
     query {
       file(absolutePath: { regex: "/hero.jpg/" }) {
+        childImageSharp {
+          fluid(maxWidth: 1200, quality: 80) {
+            ...GatsbyImageSharpFluid_withWebp
+            src
+          }
+        }
+      }
+      footer: file(absolutePath: { regex: "/footer-hero.jpg/" }) {
         childImageSharp {
           fluid(maxWidth: 1200, quality: 80) {
             ...GatsbyImageSharpFluid_withWebp
@@ -47,6 +55,9 @@ const IndexPage = () => {
             case, screen, buttons and more. From this service, we will assemble
             your Game Boy and post it to you in our Custom Boy packaging.
           </p>
+        </div>
+        <div className="container">
+          <Img fluid={footer.childImageSharp.fluid} />
         </div>
       </section>
     </Layout>

@@ -10,8 +10,8 @@ const Header = () => {
     query {
       file(relativePath: { eq: "logo-150-black.png" }) {
         childImageSharp {
-          fixed(width: 80, height: 80) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 40, maxHeight: 40) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -22,7 +22,7 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <Link className="logo" to="/">
-          <Img className="logo__image" fixed={data.file.childImageSharp.fixed} />
+          <Img className="logo__image" fluid={data.file.childImageSharp.fluid} />
         </Link>
         <Navigation />
       </div>

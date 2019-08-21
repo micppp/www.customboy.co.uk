@@ -34,6 +34,7 @@ export default function NewsArticles() {
         skip: 1
       ) {
         nodes {
+          id
           frontmatter {
             title
             date(formatString: "DD-MMM-YYYY")
@@ -52,7 +53,7 @@ export default function NewsArticles() {
     <section className="home-news">
       <div className="container">
         <h2 className="home__h2">Latest News</h2>
-        <div class="home-news__articles">
+        <div className="home-news__articles">
           <div className="home-news__article">
             {article.frontmatter.image &&
               article.frontmatter.image.childImageSharp.fluid && (
@@ -76,8 +77,8 @@ export default function NewsArticles() {
             <p className="home-news__p">{article.excerpt}</p>
           </div>
           <div>
-            {nodes.map(({ frontmatter, excerpt }) => (
-              <div className="home-news__article">
+            {nodes.map(({ id, frontmatter, excerpt }) => (
+              <div className="home-news__article" key={id}>
                 <h3 className="home-news__h3">
                   <Link to={frontmatter.path}>{frontmatter.title}</Link>
                 </h3>
