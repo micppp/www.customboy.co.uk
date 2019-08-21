@@ -1,6 +1,12 @@
 .news-item__h1,
 .news-article__h2 {
+  font-size: 1.875rem;
   line-height: 1.15;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.news-article__h2  {
   margin: 0;
 }
 
