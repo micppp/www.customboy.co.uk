@@ -1,8 +1,6 @@
 ---
 title: Delivery & Returns
 ---
-
-
 ## Delivery
 
 We aim to post all orders within one working day of purchase. Sometimes there may be other factors that mean we can't adhere to this. In this instance, we will contact you and let you know.
@@ -15,7 +13,7 @@ If you are not entirely satisfied with your purchase, we're here to help.
 
 ## Returns
 
-You have 30 (change this) calendar days to return an item from the date you received it.
+You have 30 calendar days to return an item from the date you received it.
 
 To be eligible for a return, your item must be unused and in the same condition that you received it.
 
